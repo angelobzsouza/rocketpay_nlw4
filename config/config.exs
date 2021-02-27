@@ -18,6 +18,10 @@ config :rocketseat_nlw4_rocketpay, RocketseatNlw4RocketpayWeb.Endpoint,
   pubsub_server: RocketseatNlw4Rocketpay.PubSub,
   live_view: [signing_salt: "k/lKepA8"]
 
+config :rocketseat_nlw4_rocketpay, RocketseatNlw4Rocketpay.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreing_key: [type: :binary_id]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
